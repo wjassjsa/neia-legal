@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Política de Privacidade - Luna</title>
+    <title>Política de Privacidade - Neia</title>
     <meta
       name="description"
-      content="Política de privacidade da Luna: dados de saúde, ciclo, IA, subscrições, direitos, segurança e contacto."
+      content="Política de privacidade da Neia: dados de saúde, ciclo, IA, subscrições, direitos, segurança e contacto."
     />
     <link rel="icon" href="../assets/favicon.png" />
     <link rel="stylesheet" href="./styles.css" />
@@ -14,8 +14,8 @@
   <body>
     <header class="site-header">
       <a class="brand" href="./index.html">
-        <img src="../assets/icon.png" alt="Luna" />
-        <span>Luna</span>
+        <img src="icon.png" alt="Neia" />
+        <span>Neia</span>
       </a>
       <nav aria-label="Principal">
         <a href="./index.html">Início</a>
@@ -26,9 +26,9 @@
 
     <main class="legal-page">
       <p class="eyebrow">Política de privacidade</p>
-      <h1>Como a Luna protege os teus dados</h1>
+      <h1>Como a Neia protege os teus dados</h1>
       <p class="lead">
-        A Luna trata informação íntima e de saúde. Por isso, a nossa regra é simples:
+        A Neia trata informação íntima e de saúde. Por isso, a nossa regra é simples:
         recolher apenas o necessário para a app funcionar, explicar o uso dos dados e
         nunca vender dados de saúde, ciclo, fertilidade, relações sexuais, sintomas ou notas.
       </p>
@@ -36,9 +36,9 @@
       <section>
         <h2>Quem somos</h2>
         <p>
-          A Luna é uma app de saúde feminina que ajuda a registar ciclo, período,
+          A Neia é uma app de saúde feminina que ajuda a registar ciclo, período,
           sintomas, humor, energia, sono, fertilidade, relações, notas e conversas com
-          a Luna IA. A Luna ajuda a organizar informação pessoal; não é um dispositivo
+          a Neia IA. A Neia ajuda a organizar informação pessoal; não é um dispositivo
           médico, não faz diagnósticos, não trata doenças e não substitui profissionais
           de saúde.
         </p>
@@ -50,7 +50,7 @@
           <li><strong>Conta e perfil:</strong> nome, e-mail, data de nascimento ou faixa etária, objetivo, preferências, foto de perfil opcional e estado da sessão.</li>
           <li><strong>Dados de ciclo e saúde:</strong> datas de período, duração do ciclo, fluxo, spotting, sintomas, humor, energia, sono, dor, muco cervical, temperatura basal, fertilidade, relações sexuais e notas.</li>
           <li><strong>Previsões e insights:</strong> fase do ciclo, período previsto, ovulação estimada, janela fértil, padrões, pontuação de qualidade dos dados e explicações geradas.</li>
-          <li><strong>Luna IA:</strong> mensagens que envias, respostas da assistente, contexto recente necessário para responder e sinalizações de segurança quando uma mensagem pode indicar risco.</li>
+          <li><strong>Neia IA:</strong> mensagens que envias, respostas da assistente, contexto recente necessário para responder e sinalizações de segurança quando uma mensagem pode indicar risco.</li>
           <li><strong>Subscrição:</strong> produto comprado, plano, estado da assinatura, recibo/identificador da loja e resultado da verificação do servidor.</li>
           <li><strong>Dados técnicos:</strong> versão da app, eventos de segurança, diagnósticos, erros, desempenho e eventos de produto não sensíveis.</li>
         </ul>
@@ -61,7 +61,7 @@
         <ul class="check-list">
           <li>Para calcular fase do ciclo, previsões de período, ovulação e contexto diário.</li>
           <li>Para guardar histórico, mostrar padrões, explicar evidência e criar resumos úteis.</li>
-          <li>Para responder com contexto na Luna IA, sempre com limites de segurança e sem prometer diagnóstico.</li>
+          <li>Para responder com contexto na Neia IA, sempre com limites de segurança e sem prometer diagnóstico.</li>
           <li>Para gerir conta, autenticação, subscrições, exportação e eliminação de dados.</li>
           <li>Para prevenir abuso, proteger a app, corrigir erros e melhorar estabilidade.</li>
           <li>Para perceber se a introdução, o primeiro registo e as funcionalidades essenciais funcionam, usando apenas eventos técnicos sem sintomas, notas, datas do ciclo ou texto da IA.</li>
@@ -83,7 +83,7 @@
       <section>
         <h2>IA e dados de saúde</h2>
         <p>
-          As respostas da Luna IA são educativas e baseadas no contexto que forneces. A Luna
+          As respostas da Neia IA são educativas e baseadas no contexto que forneces. A Neia
           não confirma doenças, não garante fertilidade, não substitui contraceção, não prevê
           gravidez com certeza e não substitui uma consulta médica. Em sinais urgentes, a app
           recomenda procurar apoio médico ou emergência local.
@@ -92,15 +92,32 @@
           A app móvel não expõe chaves privadas de IA. As chamadas de IA passam por backend
           próprio, com autenticação, limites de uso e contexto mínimo necessário.
         </p>
+        <p>
+          A Neia usa a API da OpenAI com armazenamento de resposta desativado
+          (<code>store: false</code>). Os dados enviados através da API não são usados para
+          treinar modelos por defeito. Ao abrigo dos controlos normais do fornecedor, a
+          pergunta, a resposta e dados técnicos podem ainda ser conservados até 30 dias para
+          deteção de abuso e segurança. A Neia não afirma ter Zero Data Retention.
+        </p>
+      </section>
+
+      <section>
+        <h2>Onde passam os teus dados</h2>
+        <ul class="check-list">
+          <li><strong>No iPhone:</strong> a foto de perfil e uma cópia local protegida da experiência. A foto não é enviada para a conta na versão atual.</li>
+          <li><strong>Na Supabase:</strong> conta, perfil, registos, conversas e estado da assinatura, para autenticação, sincronização, exportação e eliminação.</li>
+          <li><strong>Na OpenAI:</strong> a pergunta e o contexto mínimo necessário para gerar uma resposta da Neia IA, sujeitos aos limites de retenção descritos acima.</li>
+          <li><strong>Na Apple:</strong> o pagamento e a assinatura. A Neia recebe o produto, identificador e estado da compra, não os dados do cartão.</li>
+        </ul>
       </section>
 
       <section>
         <h2>Partilha com prestadores de serviço</h2>
         <p>
-          Podemos usar prestadores de serviço para alojamento, autenticação, base de dados,
-          verificação de subscrições, IA, diagnóstico técnico, e-mail transacional, suporte,
-          exportação e eliminação de conta. Estes prestadores só devem tratar dados para
-          fornecer a funcionalidade da Luna, segurança, suporte ou obrigações legais.
+          Usamos Supabase para alojamento, autenticação e base de dados, OpenAI para gerar
+          respostas da Neia IA, Apple para pagamentos e subscrições e Resend para e-mail
+          transacional. Estes prestadores só devem tratar dados para fornecer a funcionalidade
+          da Neia, segurança, suporte ou obrigações legais.
         </p>
       </section>
 
@@ -125,7 +142,7 @@
         </p>
         <p>
           Se retirares consentimento para dados de saúde, algumas funcionalidades podem deixar
-          de funcionar porque a Luna precisa desses dados para calcular e explicar o ciclo.
+          de funcionar porque a Neia precisa desses dados para calcular e explicar o ciclo.
         </p>
       </section>
 
@@ -148,7 +165,7 @@
       <section>
         <h2>Menores</h2>
         <p>
-          A Luna não é dirigida a crianças quando a lei exige consentimento parental e esse
+          A Neia não é dirigida a crianças quando a lei exige consentimento parental e esse
           consentimento não existe. Quando aplicável, podemos limitar a experiência, pedir
           confirmação adicional ou apagar a conta se percebermos que foram tratados dados de
           uma menor sem o consentimento exigido por lei.
@@ -166,14 +183,14 @@
 
       <section>
         <h2>Contacto</h2>
-        <p>Privacidade: <a href="mailto:luna.app.suporte@proton.me">luna.app.suporte@proton.me</a></p>
-        <p>Suporte: <a href="mailto:luna.app.suporte@proton.me">luna.app.suporte@proton.me</a></p>
-        <p>Última atualização: 12 de julho de 2026.</p>
+        <p>Privacidade: <a href="mailto:neia.app.suporte@proton.me">neia.app.suporte@proton.me</a></p>
+        <p>Suporte: <a href="mailto:neia.app.suporte@proton.me">neia.app.suporte@proton.me</a></p>
+        <p>Última atualização: 17 de julho de 2026.</p>
       </section>
     </main>
 
     <footer>
-      <span>© 2026 Luna</span>
+      <span>© 2026 Neia</span>
       <a href="./index.html">Início</a>
       <a href="./terms.html">Termos</a>
       <a href="./support.html">Suporte</a>
