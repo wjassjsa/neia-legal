@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Confirmação do responsável - Neia</title>
+    <meta
+      name="description"
+      content="Página segura para um responsável confirmar o acesso de uma pessoa jovem à Neia."
+    />
+    <link rel="icon" href="./icon.png" />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .guardian-page {
+        margin: 0 auto;
+        max-width: 720px;
+        padding: 48px 24px 88px;
+      }
+
+      .guardian-card {
+        background: var(--white);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        box-shadow: 0 20px 56px rgba(95, 45, 77, 0.1);
+        padding: 32px;
+      }
+
+      .guardian-card h1 {
+        font-size: clamp(34px, 7vw, 52px);
+        line-height: 1.02;
+      }
+
+      .guardian-privacy {
+        background: var(--blush);
+        border-radius: 8px;
+        color: var(--plum);
+        font-weight: 700;
+        padding: 16px;
+      }
+
+      .guardian-form {
+        display: grid;
+        gap: 16px;
+        margin-top: 28px;
+      }
+
+      .guardian-form label:not(.guardian-checkbox) {
+        display: grid;
+        font-weight: 800;
+        gap: 8px;
+      }
+
+      .guardian-form input[type="text"] {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        color: var(--ink);
+        font: inherit;
+        min-height: 50px;
+        padding: 12px 14px;
+      }
+
+      .guardian-form input[type="text"]:focus,
+      .guardian-checkbox input:focus-visible {
+        outline: 3px solid rgba(220, 91, 130, 0.28);
+        outline-offset: 2px;
+      }
+
+      .guardian-checkbox {
+        align-items: flex-start;
+        color: var(--muted);
+        cursor: pointer;
+        display: flex;
+        font-size: 15px;
+        gap: 10px;
+      }
+
+      .guardian-checkbox input {
+        accent-color: var(--rose);
+        height: 20px;
+        margin: 2px 0 0;
+        min-width: 20px;
+      }
+
+      .guardian-button {
+        appearance: none;
+        border: 0;
+        border-radius: 999px;
+        cursor: pointer;
+        font: inherit;
+        font-weight: 800;
+        min-height: 52px;
+        padding: 14px 20px;
+      }
+
+      .guardian-button:disabled {
+        cursor: not-allowed;
+        opacity: 0.48;
+      }
+
+      .guardian-status {
+        color: var(--muted);
+        font-weight: 700;
+        margin: 20px 0 0;
+      }
+
+      .guardian-status[data-state="error"] {
+        color: #a3365d;
+      }
+
+      .guardian-status[data-state="success"] {
+        color: #256642;
+      }
+
+      .guardian-help {
+        color: var(--muted);
+        font-size: 14px;
+        margin: 26px 0 0;
+      }
+
+      @media (max-width: 560px) {
+        .guardian-page {
+          padding: 24px 16px 56px;
+        }
+
+        .guardian-card {
+          padding: 24px 20px;
+        }
+
+        .site-header,
+        footer {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html">
+        <img src="icon.png" alt="Neia" />
+        <span>Neia</span>
+      </a>
+      <nav aria-label="Principal">
+        <a href="./privacy.html" data-copy="privacy">Privacidade</a>
+        <a href="./support.html" data-copy="support">Suporte</a>
+      </nav>
+    </header>
+
+    <main class="guardian-page">
+      <section class="guardian-card" aria-labelledby="guardian-title">
+        <p class="eyebrow" data-copy="eyebrow">Confirmação do responsável</p>
+        <h1 id="guardian-title" data-copy="title">Confirma o acesso à Neia</h1>
+        <p class="lead" data-copy="intro">
+          Alguém ao teu cuidado pediu autorização para usar a Neia.
+        </p>
+        <p class="guardian-privacy" data-copy="privacyNote">
+          Esta página não mostra nem dá acesso ao questionário, registos, conversas ou outros dados de saúde.
+        </p>
+
+        <form id="guardian-form" class="guardian-form" novalidate>
+          <label for="guardian-name">
+            <span data-copy="nameLabel">O teu nome completo</span>
+            <input
+              id="guardian-name"
+              name="guardian-name"
+              type="text"
+              autocomplete="name"
+              maxlength="120"
+              required
+              data-placeholder="namePlaceholder"
+              placeholder="Nome do responsável"
+            />
+          </label>
+          <label class="guardian-checkbox" for="guardian-confirmation">
+            <input id="guardian-confirmation" name="guardian-confirmation" type="checkbox" />
+            <span data-copy="agreement">
+              Confirmo que sou responsável pela pessoa jovem e que autorizo o acesso à Neia.
+            </span>
+          </label>
+          <button id="guardian-submit" class="guardian-button primary" type="submit" disabled data-copy="confirm">
+            Confirmar autorização
+          </button>
+        </form>
+
+        <p id="guardian-status" class="guardian-status" role="status" aria-live="polite"></p>
+        <p class="guardian-help" data-copy="help">
+          Este pedido expira em 48 horas. Se não o reconheces, podes simplesmente fechar esta página.
+        </p>
+        <noscript>
+          <p class="guardian-status" data-state="error">
+            Para confirmar este pedido, abre esta página num browser com JavaScript ativo.
+          </p>
+        </noscript>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 Neia</span>
+      <a href="./privacy.html" data-copy="privacy">Privacidade</a>
+      <a href="./terms.html" data-copy="terms">Termos</a>
+      <a href="./support.html" data-copy="support">Suporte</a>
+    </footer>
+
+    <script>
+      (() => {
+        const endpoint = "https://wbnyzvfzfirwihoofsnu.supabase.co/functions/v1/guardian-consent";
+        const language = navigator.language && navigator.language.toLowerCase().startsWith("en") ? "en" : "pt";
+        const copy = {
+          pt: {
+            eyebrow: "Confirmação do responsável",
+            title: "Confirma o acesso à Neia",
+            intro: "Alguém ao teu cuidado pediu autorização para usar a Neia.",
+            privacyNote: "Esta página não mostra nem dá acesso ao questionário, registos, conversas ou outros dados de saúde.",
+            nameLabel: "O teu nome completo",
+            namePlaceholder: "Nome do responsável",
+            agreement: "Confirmo que sou responsável pela pessoa jovem e que autorizo o acesso à Neia.",
+            confirm: "Confirmar autorização",
+            confirming: "A confirmar a autorização...",
+            success: "Autorização confirmada. Já podes fechar esta página.",
+            invalid: "Esta ligação não é válida. Pede um novo email de confirmação na app.",
+            expired: "Este pedido já expirou. Pede um novo email de confirmação na app.",
+            unavailable: "Não foi possível confirmar agora. Tenta novamente dentro de alguns minutos.",
+            help: "Este pedido expira em 48 horas. Se não o reconheces, podes simplesmente fechar esta página.",
+            privacy: "Privacidade",
+            support: "Suporte",
+            terms: "Termos"
+          },
+          en: {
+            eyebrow: "Guardian confirmation",
+            title: "Confirm access to Neia",
+            intro: "Someone in your care has asked for permission to use Neia.",
+            privacyNote: "This page does not show or grant access to their questionnaire, records, conversations, or other health data.",
+            nameLabel: "Your full name",
+            namePlaceholder: "Guardian's name",
+            agreement: "I confirm that I am responsible for this young person and authorise their access to Neia.",
+            confirm: "Confirm authorisation",
+            confirming: "Confirming authorisation...",
+            success: "Authorisation confirmed. You can now close this page.",
+            invalid: "This link is not valid. Ask for a new confirmation email in the app.",
+            expired: "This request has expired. Ask for a new confirmation email in the app.",
+            unavailable: "We could not confirm this right now. Please try again in a few minutes.",
+            help: "This request expires after 48 hours. If you do not recognise it, you can simply close this page.",
+            privacy: "Privacy",
+            support: "Support",
+            terms: "Terms"
+          }
+        }[language];
+
+        document.documentElement.lang = language === "en" ? "en" : "pt-PT";
+        document.title = language === "en" ? "Guardian confirmation - Neia" : "Confirmação do responsável - Neia";
+        document.querySelectorAll("[data-copy]").forEach((element) => {
+          element.textContent = copy[element.dataset.copy];
+        });
+        document.querySelectorAll("[data-placeholder]").forEach((element) => {
+          element.setAttribute("placeholder", copy[element.dataset.placeholder]);
+        });
+
+        const token = new URLSearchParams(window.location.hash.slice(1)).get("token") || "";
+        if (window.location.hash) {
+          history.replaceState({}, document.title, `${window.location.pathname}${window.location.search}`);
+        }
+
+        const form = document.getElementById("guardian-form");
+        const nameInput = document.getElementById("guardian-name");
+        const agreement = document.getElementById("guardian-confirmation");
+        const submit = document.getElementById("guardian-submit");
+        const status = document.getElementById("guardian-status");
+        const validToken = /^[A-Za-z0-9_-]{40,64}$/.test(token);
+
+        const setStatus = (message, state) => {
+          status.textContent = message;
+          status.dataset.state = state || "";
+        };
+        const updateSubmit = () => {
+          submit.disabled = !validToken || nameInput.value.trim().length < 2 || !agreement.checked;
+        };
+
+        if (!validToken) {
+          setStatus(copy.invalid, "error");
+        }
+
+        nameInput.addEventListener("input", updateSubmit);
+        agreement.addEventListener("change", updateSubmit);
+        updateSubmit();
+
+        form.addEventListener("submit", async (event) => {
+          event.preventDefault();
+          if (submit.disabled) return;
+
+          submit.disabled = true;
+          setStatus(copy.confirming, "");
+          try {
+            const response = await fetch(endpoint, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                action: "confirm",
+                token,
+                guardianName: nameInput.value.trim(),
+                accepted: true
+              }),
+              credentials: "omit",
+              cache: "no-store",
+              referrerPolicy: "no-referrer"
+            });
+            const data = await response.json().catch(() => ({}));
+            if (!response.ok || data.status !== "approved") {
+              setStatus(response.status === 410 ? copy.expired : copy.unavailable, "error");
+              updateSubmit();
+              return;
+            }
+
+            form.hidden = true;
+            setStatus(copy.success, "success");
+          } catch {
+            setStatus(copy.unavailable, "error");
+            updateSubmit();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
