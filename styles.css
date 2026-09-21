@@ -315,3 +315,375 @@ footer {
     min-height: 500px;
   }
 }
+
+/* Product landing page */
+.landing {
+  background: #fffafb;
+  overflow-x: hidden;
+}
+
+.landing-header {
+  background: rgba(255, 250, 251, 0.94);
+  border-bottom: 1px solid rgba(95, 45, 77, 0.1);
+  max-width: none;
+  padding-left: max(24px, calc((100vw - 1180px) / 2));
+  padding-right: max(24px, calc((100vw - 1180px) / 2));
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.cinema-hero {
+  align-items: center;
+  background: #f8e9ef;
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) minmax(340px, 0.74fr) 52px;
+  min-height: calc(100vh - 87px);
+  overflow: hidden;
+  padding: 52px max(24px, calc((100vw - 1180px) / 2));
+  position: relative;
+}
+
+.cinema-hero::before {
+  background: #fffafb;
+  border-radius: 50%;
+  content: "";
+  height: 720px;
+  position: absolute;
+  right: 2vw;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 720px;
+}
+
+.cinema-copy,
+.cinema-device,
+.trailer-download {
+  position: relative;
+  z-index: 1;
+}
+
+.cinema-copy {
+  max-width: 660px;
+}
+
+.cinema-copy h1 {
+  font-size: clamp(54px, 7.4vw, 102px);
+  line-height: 0.94;
+}
+
+.cinema-device {
+  background: #25171f;
+  border: 10px solid #25171f;
+  border-radius: 44px;
+  box-shadow: 0 32px 80px rgba(70, 27, 48, 0.2);
+  justify-self: center;
+  max-height: 78vh;
+  overflow: hidden;
+  width: min(360px, 74vw);
+}
+
+.cinema-device video {
+  background: #fff8fa;
+  display: block;
+  max-height: calc(78vh - 20px);
+  object-fit: contain;
+  width: 100%;
+}
+
+.trailer-download {
+  align-self: end;
+  color: var(--plum);
+  font-size: 13px;
+  font-weight: 800;
+  padding-bottom: 18px;
+  text-decoration: none;
+  writing-mode: vertical-rl;
+}
+
+.proof-strip {
+  background: var(--plum);
+  color: white;
+  display: flex;
+  font-size: 13px;
+  font-weight: 800;
+  gap: 36px;
+  justify-content: center;
+  padding: 18px 24px;
+}
+
+.proof-strip span + span::before {
+  color: #e3a0b8;
+  content: "•";
+  margin-right: 36px;
+}
+
+.experience {
+  padding: 104px max(24px, calc((100vw - 1180px) / 2));
+}
+
+.experience .section-heading {
+  margin: 0 0 48px;
+}
+
+.product-reel {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.product-shot {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.product-shot img {
+  aspect-ratio: 430 / 760;
+  display: block;
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+}
+
+.product-shot figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 18px;
+}
+
+.product-shot figcaption span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.clarity-band {
+  align-items: end;
+  background: #2b1823;
+  color: white;
+  display: grid;
+  gap: 72px;
+  grid-template-columns: 1fr 1fr;
+  padding: 96px max(24px, calc((100vw - 1180px) / 2));
+}
+
+.clarity-copy p:last-child {
+  color: #dfcbd4;
+  font-size: 18px;
+  max-width: 600px;
+}
+
+.clarity-points {
+  margin: 0;
+}
+
+.clarity-points div {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 120px 1fr;
+  padding: 20px 0;
+}
+
+.clarity-points dt {
+  color: #efa9c1;
+  font-weight: 800;
+}
+
+.clarity-points dd {
+  margin: 0;
+}
+
+.privacy-promise {
+  display: grid;
+  gap: 72px;
+  grid-template-columns: 0.9fr 1.1fr;
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 104px 24px 20px;
+}
+
+.privacy-heading > p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 18px;
+  max-width: 520px;
+}
+
+.privacy-heading a {
+  color: var(--plum);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.privacy-controls p {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 150px 1fr;
+  margin: 0;
+  padding: 22px 0;
+}
+
+.privacy-controls span {
+  color: var(--muted);
+}
+
+.plus-showcase {
+  display: grid;
+  gap: 64px;
+  grid-template-columns: 0.8fr 1.2fr;
+  margin: 0 auto;
+  max-width: 1180px;
+  padding: 104px 24px;
+}
+
+.plus-benefits p {
+  border-top: 1px solid var(--line);
+  display: grid;
+  gap: 18px;
+  grid-template-columns: minmax(180px, 0.7fr) 1fr;
+  margin: 0;
+  padding: 22px 0;
+}
+
+.plus-benefits span,
+.plus-note {
+  color: var(--muted);
+}
+
+.plus-note {
+  font-size: 14px;
+  grid-column: 2;
+  margin-top: -44px;
+}
+
+.launch-note {
+  background: #f8e9ef;
+  padding: 92px 24px;
+  text-align: center;
+}
+
+.launch-note img {
+  border-radius: 24px;
+  height: 88px;
+  margin-bottom: 24px;
+  width: 88px;
+}
+
+.launch-note h2 {
+  margin-bottom: 12px;
+}
+
+@media (max-width: 900px) {
+  .landing-header nav a:nth-child(-n + 2) {
+    display: none;
+  }
+
+  .cinema-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-bottom: 64px;
+    padding-top: 44px;
+  }
+
+  .cinema-hero::before {
+    height: 520px;
+    right: -220px;
+    top: 63%;
+    width: 520px;
+  }
+
+  .cinema-copy h1 {
+    font-size: clamp(48px, 14vw, 72px);
+  }
+
+  .cinema-device {
+    margin-top: 40px;
+    max-height: none;
+    width: min(340px, 88vw);
+  }
+
+  .cinema-device video {
+    max-height: none;
+  }
+
+  .trailer-download {
+    justify-self: center;
+    margin-top: 18px;
+    padding: 0;
+    writing-mode: horizontal-tb;
+  }
+
+  .proof-strip {
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .proof-strip span + span::before {
+    content: none;
+  }
+
+  .product-reel {
+    grid-auto-columns: minmax(260px, 78vw);
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    margin-right: -24px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .product-shot {
+    scroll-snap-align: start;
+  }
+
+  .clarity-band,
+  .privacy-promise,
+  .plus-showcase {
+    gap: 40px;
+    grid-template-columns: 1fr;
+  }
+
+  .plus-note {
+    grid-column: 1;
+    margin-top: -20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .landing-header {
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 14px;
+    padding-top: 14px;
+  }
+
+  .landing-header nav {
+    font-size: 13px;
+    gap: 12px;
+  }
+
+  .landing-header .brand img {
+    height: 36px;
+    width: 36px;
+  }
+
+  .experience,
+  .clarity-band,
+  .privacy-promise,
+  .plus-showcase {
+    padding-bottom: 72px;
+    padding-top: 72px;
+  }
+
+  .clarity-points div,
+  .privacy-controls p,
+  .plus-benefits p {
+    gap: 5px;
+    grid-template-columns: 1fr;
+  }
+}

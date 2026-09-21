@@ -3,118 +3,133 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Neia - Entende o teu ciclo com IA</title>
-    <meta
-      name="description"
-      content="A Neia ajuda-te a compreender o ciclo, os sintomas e os teus padrões pessoais com explicações assistidas por IA, sem anúncios nem venda de dados de saúde."
-    />
+    <title>Neia - O teu ciclo, explicado com contexto</title>
+    <meta name="description" content="A Neia transforma ciclo, sintomas e registos diários em explicações claras, padrões pessoais e previsões transparentes." />
+    <meta name="theme-color" content="#fff8fa" />
+    <meta property="og:title" content="Neia - O teu ciclo, explicado" />
+    <meta property="og:description" content="Saúde feminina com contexto, privacidade e previsões transparentes." />
+    <meta property="og:image" content="https://neia.life/media/neia-app-preview-poster.jpg" />
     <link rel="icon" href="./icon.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="./index.html">
-        <img src="icon.png" alt="Neia" />
+  <body class="landing">
+    <header class="site-header landing-header">
+      <a class="brand" href="./index.html" aria-label="Neia, página inicial">
+        <img src="./icon.png" alt="" />
         <span>Neia</span>
       </a>
       <nav aria-label="Principal">
+        <a href="#experiencia">A app</a>
         <a href="#plus">Neia Plus</a>
         <a href="./privacy.html">Privacidade</a>
-        <a href="./terms.html">Termos</a>
         <a href="./support.html">Suporte</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow">Saúde feminina com IA e privacidade</p>
-          <h1>A Neia não mostra apenas datas. Ajuda-te a compreender o teu corpo.</h1>
-          <p class="lead">
-            Regista sintomas em menos de um minuto, acompanha o ciclo e descobre
-            padrões pessoais com explicações claras e limites médicos responsáveis.
-          </p>
+      <section class="cinema-hero" aria-labelledby="hero-title">
+        <div class="cinema-copy">
+          <p class="eyebrow">Assistente inteligente de saúde feminina</p>
+          <h1 id="hero-title">O teu ciclo.<br />Finalmente explicado.</h1>
+          <p class="lead">A Neia liga datas, sintomas e registos para te mostrar o que sabe, o que estima e porquê.</p>
           <div class="actions">
-            <a class="button primary" href="#inside">Conhecer a Neia</a>
-            <a class="button secondary" href="./privacy.html">Ver privacidade</a>
+            <a class="button primary" href="#trailer">Ver em 24 segundos</a>
+            <a class="button secondary" href="#experiencia">Explorar a app</a>
           </div>
-          <p class="trust">Sem anúncios. Sem venda de dados de saúde. Sem diagnósticos médicos.</p>
+          <p class="trust">Sem anúncios. Sem venda de dados de saúde. Sem promessas médicas.</p>
         </div>
-        <div class="phone" aria-label="Pré-visualização da app Neia">
-          <div class="phone-top"></div>
-          <div class="screen-card">
-            <span class="phase">Dia 18 - fase lútea</span>
-            <h2>Hoje o teu corpo pode pedir mais calma.</h2>
-            <p>
-              A Neia cruza fase do ciclo, energia, sono e sintomas para explicar
-              o que podes estar a sentir.
-            </p>
-            <div class="metric-row">
-              <span>Energia</span>
-              <strong>6/10</strong>
-            </div>
-            <div class="metric-row">
-              <span>Humor</span>
-              <strong>Sensível</strong>
-            </div>
-          </div>
+
+        <div class="cinema-device" id="trailer">
+          <video autoplay muted loop playsinline controls poster="./media/neia-app-preview-poster.jpg" aria-label="Demonstração da app Neia">
+            <source src="./media/neia-app-preview.mp4" type="video/mp4" />
+            O teu navegador não suporta vídeo HTML5.
+          </video>
         </div>
+
+        <a class="trailer-download" href="./media/neia-app-preview.mp4" download>Guardar o trailer</a>
       </section>
 
-      <section class="band">
+      <section class="proof-strip" aria-label="Compromissos da Neia">
+        <span>Registo em 30 segundos</span>
+        <span>Dados e estimativas separados</span>
+        <span>Privacidade por desenho</span>
+      </section>
+
+      <section class="experience" id="experiencia">
         <div class="section-heading">
-          <p class="eyebrow">Informação com contexto</p>
-          <h2>Mais do que um calendário: os teus registos explicados com clareza.</h2>
+          <p class="eyebrow">Dentro da Neia</p>
+          <h2>Menos ruído. Mais compreensão.</h2>
+          <p class="lead">Tudo começa com uma pergunta simples: o que precisas de saber hoje?</p>
         </div>
-        <div class="grid">
-          <article>
-            <h3>Explicações diárias</h3>
-            <p>Entende o que a fase atual pode significar para energia, humor, sono e sintomas.</p>
-          </article>
-          <article>
-            <h3>Padrões pessoais</h3>
-            <p>A Neia organiza sinais por fase do ciclo e mostra os registos usados em cada leitura.</p>
-          </article>
-          <article>
-            <h3>Privacidade primeiro</h3>
-            <p>O modelo de negócio é a assinatura, não publicidade nem venda de dados sensíveis.</p>
-          </article>
+
+        <div class="product-reel" aria-label="Ecrãs principais da app">
+          <figure class="product-shot">
+            <img src="./media/captures/home.png" alt="Ecrã Hoje da Neia com o dia do ciclo e a próxima previsão" loading="lazy" />
+            <figcaption><strong>Hoje</strong><span>O essencial, logo ao abrir.</span></figcaption>
+          </figure>
+          <figure class="product-shot">
+            <img src="./media/captures/calendar.png" alt="Calendário mensal da Neia com período e janela fértil" loading="lazy" />
+            <figcaption><strong>Calendário</strong><span>O ciclo inteiro à vista.</span></figcaption>
+          </figure>
+          <figure class="product-shot">
+            <img src="./media/captures/data.png" alt="Ecrã Dados da Neia com tendências de energia, sono e sintomas" loading="lazy" />
+            <figcaption><strong>Dados</strong><span>Padrões com a base visível.</span></figcaption>
+          </figure>
+          <figure class="product-shot">
+            <img src="./media/captures/chat.png" alt="Assistente Neia a explicar o dia do ciclo" loading="lazy" />
+            <figcaption><strong>Assistente</strong><span>Contexto sem começar do zero.</span></figcaption>
+          </figure>
         </div>
       </section>
 
-      <section id="inside" class="split">
-        <div>
-          <p class="eyebrow">Dentro da app</p>
-          <h2>O teu ciclo e bem-estar no mesmo lugar</h2>
-          <ul class="check-list">
-            <li>Configuração inicial adaptada ao teu objetivo.</li>
-            <li>Resumo diário com fase do ciclo e contexto pessoal.</li>
-            <li>Registo rápido de sintomas, fluxo, energia, sono e notas.</li>
-            <li>Neia IA com linguagem simples e limites explícitos.</li>
-            <li>Calendário, tendências, exportação e eliminação de dados.</li>
-          </ul>
+      <section class="clarity-band">
+        <div class="clarity-copy">
+          <p class="eyebrow">Confiança antes de certezas</p>
+          <h2>Uma previsão não é um palpite.</h2>
+          <p>A Neia mostra datas reais, janelas estimadas e nível de confiança em separado. Quando confirmas um período ou acrescentas um registo, a leitura é recalibrada.</p>
         </div>
-        <div id="plus" class="plus-card">
-          <span class="badge">Neia Plus</span>
-          <h2>Mais contexto, memória e acompanhamento</h2>
+        <dl class="clarity-points">
+          <div><dt>Real</dt><dd>O que registaste.</dd></div>
+          <div><dt>Estimado</dt><dd>O que o ciclo sugere.</dd></div>
+          <div><dt>Explicado</dt><dd>Os dados usados na leitura.</dd></div>
+        </dl>
+      </section>
+
+      <section class="privacy-promise" id="privacidade">
+        <div class="privacy-heading">
+          <p class="eyebrow">Privacidade sem letra pequena</p>
+          <h2>Os teus dados são teus.</h2>
           <p>
-            Neia Plus acrescenta memória alargada da IA, perfil de saúde aprofundado,
-            radar de padrões entre ciclos, resumo mensal e PDF privado para consulta.
+            A Neia usa apenas o necessário para prestar o serviço. Não vende dados de saúde,
+            não mostra anúncios e não usa tracking publicitário.
           </p>
-          <a class="button primary" href="#download">Ver disponibilidade</a>
+          <a href="./privacy.html">Ler a política completa ›</a>
+        </div>
+        <div class="privacy-controls">
+          <p><strong>No teu iPhone</strong><span>A foto de perfil e a cópia local protegida permanecem no dispositivo.</span></p>
+          <p><strong>Na tua conta</strong><span>O acesso aos dados sincronizados é autenticado e separado por utilizadora.</span></p>
+          <p><strong>Sob o teu controlo</strong><span>Podes consultar, exportar e eliminar os teus dados, mesmo sem Neia Plus.</span></p>
         </div>
       </section>
 
-      <section id="download" class="download">
-        <p class="eyebrow">Lançamento</p>
-        <h2>Disponível em breve na App Store.</h2>
-        <p>
-          A primeira versão será lançada em Portugal. O link oficial será publicado
-          aqui quando a análise da Apple estiver concluída.
-        </p>
-        <div class="store-buttons">
-          <span>App Store - em breve</span>
+      <section class="plus-showcase" id="plus">
+        <div>
+          <p class="eyebrow">Neia Plus</p>
+          <h2>Mais memória.<br />Menos repetição.</h2>
         </div>
+        <div class="plus-benefits">
+          <p><strong>IA com continuidade</strong><span>Retoma conversas e contexto entre dias e ciclos.</span></p>
+          <p><strong>Comparação semana a semana</strong><span>Vê o que mudou na energia e no sono sem procurar diferenças à mão.</span></p>
+          <p><strong>Resumo para consulta</strong><span>Organiza histórico, sintomas e padrões num PDF privado.</span></p>
+        </div>
+        <p class="plus-note">Calendário, registos e dados essenciais continuam gratuitos.</p>
+      </section>
+
+      <section class="launch-note">
+        <img src="./icon.png" alt="Ícone da Neia" />
+        <p class="eyebrow">Em breve na App Store</p>
+        <h2>Conhece o teu ritmo.</h2>
+        <p>A Neia estreia primeiro em português de Portugal.</p>
       </section>
     </main>
 
