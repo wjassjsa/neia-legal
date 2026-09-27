@@ -429,7 +429,7 @@ footer {
 .product-reel {
   display: grid;
   gap: 18px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .product-shot {
@@ -441,7 +441,7 @@ footer {
 }
 
 .product-shot img {
-  aspect-ratio: 430 / 760;
+  aspect-ratio: 1320 / 2868;
   display: block;
   object-fit: cover;
   object-position: top;
